@@ -35,26 +35,7 @@ db.connect((err) => {
   }
 });
 
-// Login route
-// app.post('/login', (req, res) => {
-//   const { username, password } = req.body;
-//   console.log(`Received login attempt with username: ${username}, password: ${password}`);
 
-//   // Query the database for user data
-//   const query = 'SELECT * FROM users WHERE username = ? AND password = ?';
-//   db.query(query, [username, password], (err, results) => {
-//     if (err) {
-//             res.json({ success: false, message: 'Internal server error' });
-
-//     } else if (results.length > 0) {
-//       res.json({ success: true, message: 'Login successful!' });
-//     } else {
-//                   res.json({ success: false, message: 'Invalid username or password' });
-
-//     }
-//   });
-// });
-// In your login route handler
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
   console.log(`Received login attempt with username: ${username}, password: ${password}`);
